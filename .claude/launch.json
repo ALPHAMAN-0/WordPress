@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "study-site",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["/private/tmp/claude-502/-Users-siam-Documents-Github-WordPress/7029db0c-cecc-4a84-925d-69fb679f5ec3/scratchpad/server.js"],
+      "port": 8000
+    }
+  ]
+}

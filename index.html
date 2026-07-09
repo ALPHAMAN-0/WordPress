@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Interactive WordPress developer study guide — 22 sections, code, Q&A flashcards, and a mastery checklist that tracks your progress." />
+  <title>WordPress Mastery — Interactive Study Guide</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%98%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Top bar ===== -->
+  <header class="topbar" id="topbar">
+    <div class="topbar-inner">
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">📘</span>
+        <span class="brand-text">
+          <strong id="brandTitle">WordPress Mastery</strong>
+          <small id="brandTagline">Your interactive path from basics to master</small>
+        </span>
+      </div>
+
+      <div class="search-wrap">
+        <input type="search" id="search" placeholder="Search concepts, code, Q&A…" aria-label="Search the guide" autocomplete="off" />
+        <button class="icon-btn clear-search" id="clearSearch" aria-label="Clear search" hidden>✕</button>
+      </div>
+
+      <div class="topbar-actions">
+        <button class="pill-btn" id="flashcardBtn" aria-pressed="false" title="Hide all answers and test yourself">🎴 Flashcards</button>
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+      </div>
+    </div>
+
+    <!-- Mastery progress -->
+    <div class="progress-strip">
+      <div class="progress-meta">
+        <span class="tier-badge" id="tierBadge">Novice</span>
+        <span class="progress-count" id="sectionCount">0 / 22 sections mastered</span>
+      </div>
+      <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <div class="progress-meta">
+        <span class="progress-pct" id="progressPct">0%</span>
+        <button class="link-btn" id="resetBtn" title="Clear all saved progress">Reset progress</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- ===== Sidebar / TOC ===== -->
+    <aside class="sidebar" id="sidebar" aria-label="Table of contents">
+      <nav class="toc" id="toc"><!-- built by app.js --></nav>
+    </aside>
+    <div class="scrim" id="scrim" hidden></div>
+
+    <!-- ===== Main content ===== -->
+    <main class="content" id="main">
+      <noscript>
+        <div class="callout callout-warn" style="margin:2rem 0">
+          This study guide is interactive and needs JavaScript enabled to render the
+          content, checklist, and progress tracking.
+        </div>
+      </noscript>
+      <div id="intro" class="intro"><!-- built by app.js --></div>
+      <div id="sections"><!-- built by app.js --></div>
+      <p class="no-results" id="noResults" hidden>No sections match your search.</p>
+      <footer class="site-footer">
+        <p>Built as a personal WordPress study companion. Progress is saved only in this browser.</p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- toast for copy feedback -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/highlight.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
