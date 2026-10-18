@@ -4,6 +4,18 @@ A self-contained, static study site that turns a full **WordPress developer inte
 guide** (22 sections — architecture, hooks, querying, security, REST, Gutenberg, and more)
 into an interactive **checklist you can tick off as you learn**. Built to run on GitHub Pages.
 
+## Architecture / How it Works
+
+```mermaid
+flowchart LR
+    A[User] --> B[Wordpress]
+    B --> C{Logic}
+    C --> D[(Data)]
+    C --> E[Output]
+    D --> C
+```
+
+
 **Live site:** https://alphaman-0.github.io/WordPress/ *(after enabling Pages — see below)*
 
 ## What it does
