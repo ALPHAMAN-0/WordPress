@@ -7,12 +7,21 @@ into an interactive **checklist you can tick off as you learn**. Built to run on
 ## Architecture / How it Works
 
 ```mermaid
-flowchart LR
-    A[User] --> B[Wordpress]
-    B --> C{Logic}
-    C --> D[(Data)]
-    C --> E[Output]
-    D --> C
+flowchart TD
+  idx["index.html"]
+  css["styles.css"]
+  data["data.js"]
+  hl["highlight.js"]
+  app["app.js"]
+  deploy["deploy-pages.yml"]
+
+  idx --> css
+  idx --> data
+  idx --> hl
+  idx --> app
+  app --> data
+  app --> hl
+  deploy --> idx
 ```
 
 
